@@ -7,12 +7,14 @@ import {Component} from "@angular/core";
   selector: 'app-user',
   // It can be an inline template (as shown above) or reference an external file.
   template: `
-    <input type="text" (input)="handleUserInput($event)">
-    <p>Hello {{name}}</p>
+<!--    Property binding allows you to set the value of an HTML element property to the value of a property in the component. -->
+    <input type="text" (input)="handleUserInput($event)" value="{{name}}">
+    <input type="text" (input)="handleUserInput($event)" [value]="name">
+
+<p>Hello {{name}}</p>
     <p>I'm the user component</p>`
 })
-// Associate it with a TypeScript class (AppComponent in this case)
-// where you implement the component's functionality.
+// Associate it with a TypeScript class (UserComponent in this case) where you implement the component's functionality.
 export class UserComponent {
   name='Ben'
   handleUserInput(event){
