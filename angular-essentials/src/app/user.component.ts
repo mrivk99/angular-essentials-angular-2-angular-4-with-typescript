@@ -10,6 +10,10 @@ import {Component} from "@angular/core";
 <!--    Property binding allows you to set the value of an HTML element property to the value of a property in the component. -->
     <input type="text" (input)="handleUserInput($event)" value="{{name}}">
     <input type="text" (input)="handleUserInput($event)" [value]="name">
+<!--It's very common to listen to an input event and set it to a component's value, Angular has a specific directive
+for it called [(ngModel)]-->
+<!--Use it when you want to bind a value and the element inputs an event-->
+<input type="text" [(ngModel)]="name">
 
 <p>Hello {{name}}</p>
     <p>I'm the user component</p>`
