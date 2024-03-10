@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 
 // @Component is a decorator that configures an Angular component,
 @Component({
@@ -20,7 +20,7 @@ for it called [(ngModel)]-->
 })
 // Associate it with a TypeScript class (UserComponent in this case) where you implement the component's functionality.
 export class UserComponent {
-  name='Ben'
+  @Input() name;
   handleUserInput(event){
     this.name = event.target.value;
   }
