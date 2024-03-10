@@ -1,0 +1,7 @@
+<hr>
+
+<button (click)="finishLoadState()">Finish loading</button>
+
+<p [textContent]="loadState">{{ loadState }}</p>
+
+<input type="text" [(ngModel)]="loadState">
